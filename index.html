@@ -1,0 +1,1251 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Page Title</title>
+       <link href='https://fonts.googleapis.com/css?family=Sofia' rel='stylesheet'>
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@9"></script>
+</head> 
+    </head>
+    <body>
+    <style>
+       body {
+ margin:0;
+ padding:0;
+ margin: 0;
+ padding: 0;
+ height: 100vh;
+ display: -ms-grid;
+ display: grid;
+ place-items: center;
+ overflow: hidden;
+ position:fixed;
+ }
+ .sec1 {
+  position:fixed;
+  top:0;
+  left:0;
+  bottom:0;
+  height:100vh;
+  width:100%;
+  background:#090;
+  overflow:auto;
+  z-index:8;
+ }
+ .sec-inner {
+ background-image:url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTMUD8sG67bDhUCw8slRbtthUx9I_V33SnwZs-vtPQVV4F4nnk&s");
+ background-size:cover;
+ background-position:center;
+ height:100%;
+ padding:30px 20px;
+ text-align:center;
+ color:#fff;
+ }
+ img {
+  width:100%;
+ }
+ .img {
+ height:130px;
+ width:130px;
+ border-radius:50%;
+ overflow:hidden;
+ margin:20px auto 20px;
+ background:#000;
+ box-shadow:0px 0px 10px #000;
+ }
+ .btn {
+ display:inline-block;
+ outline:none;
+ border:none;
+ padding:12px 20px;
+ border-radius:20px;
+ color:#fff;
+ background:#f44559;
+ margin-top:20px;
+ }
+ .sec-inner p {
+  font-size:18px;
+  font-weight:300;
+  word-spacing:2px;
+  background:rgba(0,0,0,0.4);
+  padding:16px;
+  border-radius:7px;
+ }
+ .screen1{
+ margin:0;
+ padding:0;
+ position:absolute;
+ top:0;
+ left:0;
+ background:black;
+ height:100vh;
+ width:100vw;
+ position:fixed;
+ overflow:hidden;
+
+ }
+
+@keyframes tilt {
+  0% {
+    transform: rotateY(30deg) translateY(-300px) skewY(-30deg);
+    opacity: 0;
+  }
+  100% {
+    transform: rotateY(0deg) translateY(0) skewY(0deg);
+    opacity: 1;
+  }
+}
+ 
+ 
+ .semicirclebottom{
+ position: relative; 
+ left:-10vmin;
+ top:85vh; 
+ width:120vw; 
+ height:40vh; 
+ border-top-left-radius: 160vmin; 
+ border-top-right-radius: 160vmin; 
+ background: #b92e34;
+ z-index:1;
+ }
+ 
+ 
+ .line1, .line2, .line3, .line4, .line5, .line6, .line7, .line8, .line9, .line10, .line11, .line12, .line13, .line14, .line15, .line16, .line17, .line18, .line19, .line20{
+ position:absolute;
+ top:0vh; 
+ width:0.5vmin;
+ background-color:white;
+ }
+ 
+ .line1{
+ left:3vw;
+ height:23vh;
+ }
+ 
+ 
+ .circle1{    
+ background-color:yellow;
+ top:23vh;
+ left:1vw;
+ }
+ 
+ .line2{
+ left:6vw;
+ height:16vh;
+ }
+ 
+ 
+ .circle2{    
+ background-color:lime;
+ top:16vh;
+ left:3.5vw;
+ }
+ 
+ .line3{
+ left:10vw;
+ height:10vh;
+ }
+ 
+ 
+ .circle3{    
+ background-color:lime;
+ top:10vh;
+ left:7.9vw;
+ }
+ 
+ .line4{
+ left:16vw;
+ height:6vh;
+ 
+ }
+ 
+ 
+ .circle4{    
+ background-color:lime;
+ top:6vh;
+ left:13.9vw;
+ 
+ }
+ 
+ .line5{
+ left:20vw;
+ height:13vh;
+ 
+ }
+ 
+ 
+ .circle5{    
+ background-color:lime;
+ top:13vh;
+ left:17.9vw;
+ 
+ }
+ 
+ .line6{
+ left:25vw;
+ height:18vh;
+ 
+ }
+ 
+ 
+ .circle6{    
+ background-color:lime;
+ top:18vh;
+ left:22.9vw;
+ 
+ }
+ .line7{
+ left:30vw;
+ height:22vh;
+ }
+ 
+ 
+ .circle7{    
+ background-color:lime;
+ top:22vh;
+ left:27.9vw;
+ }
+ 
+ .line8{
+ left:36vw;
+ height:17vh;
+ }
+ 
+ 
+ .circle8{    
+ background-color:lime;
+ top:17vh;
+ left:33.9vw;
+ }
+ 
+ .line9{
+ left:40vw;
+ height:12vh;
+ }
+ 
+ 
+ .circle9{    
+ background-color:lime;
+ top:12vh;
+ left:37.9vw;
+ }
+ 
+ 
+ .line10{
+ left:45vw;
+ height:8vh;
+ }
+ 
+ 
+ .circle10{    
+ background-color:lime;
+ top:8vh;
+ left:42.9vw;
+ }
+ 
+ .line11{
+ left:50vw;
+ height:3vh;
+ }
+ 
+ 
+ .circle11{    
+ background-color:lime;
+ top:3vh;
+ left:47.9vw;
+ }
+ 
+ .line12{
+ left:55vw;
+ height:9vh;
+ }
+ 
+ 
+ .circle12{    
+ background-color:lime;
+ top:9vh;
+ left:52.9vw;
+ }
+ .line13{
+ left:60vw;
+ height:14vh;
+ }
+ 
+ 
+ .circle13{    
+ background-color:lime;
+ top:14vh;
+ left:57.9vw;
+ }
+ .line14{
+ left:65vw;
+ height:19vh;
+ }
+ 
+ 
+ .circle14{    
+ background-color:lime;
+ top:19vh;
+ left:62.9vw;
+ }
+ 
+ .line15{
+ left:70vw;
+ height:24vh;
+ }
+ 
+ 
+ .circle15{    
+ background-color:lime;
+ top:24vh;
+ left:67.9vw;
+ }
+ 
+ .line16{
+ left:75vw;
+ height:18vh;
+ }
+ 
+ 
+ .circle16{    
+ background-color:lime;
+ top:18vh;
+ left:72.9vw;
+ }
+ 
+ .line17{
+ left:80vw;
+ height:12vh;
+ }
+ 
+ 
+ .circle17{    
+ background-color:lime;
+ top:12vh;
+ left:77.9vw;
+ }
+ .line18{
+ left:85vw;
+ height:7vh;
+ }
+ 
+ 
+ .circle18{    
+ background-color:lime;
+ top:7vh;
+ left:82.9vw;
+ }
+ 
+ .line19{
+ left:90vw;
+ height:2vh;
+ }
+ 
+ 
+ .circle19{    
+ background-color:lime;
+ top:2vh;
+ left:87.9vw;
+ }
+ 
+ 
+ .line20{
+ left:95vw;
+ height:8vh;
+ }
+ 
+ 
+ .circle20{    
+ background-color:lime;
+ top:8vh;
+ left:92.9vw;
+ }
+ .circle1, .circle2, .circle3, .circle4, .circle5, .circle6, .circle7, .circle8, .circle9, .circle10, .circle11, .circle12, .circle13, .circle14, .circle15, .circle16, .circle17, .circle18, .circle19, .circle20{
+ position:absolute;
+ width:5vmin;
+ height:5vmin;
+ border-radius:50%;
+ background-color:#ff6ec7;
+ }
+ 
+ 
+ .gift{
+ position:absolute;
+ bottom:10px;
+ transform:rotate(25deg) scale(.3);
+ }
+ .bottom{
+ position: relative;
+ width: 50vw;
+ height:30vh;
+ background-color: #374A5D;
+ box-shadow:-0.20rem  0.50rem 2.65rem rgba(0,0,0,0.6);
+ border-bottom-right-radius: 5px;
+ border-bottom-left-radius: 5px;
+ }
+ .bottomline1{  
+ position:absolute;
+ width:10vw;
+ height:30vh;
+ background:#E6E6E6;
+ top: 0;
+ left:20vw;
+ border-radius: 5px;
+ }
+ .lid{
+ position:absolute;
+ width:54vw;
+ height:7vh;
+ background-color: #374A5D;
+ box-shadow:-0.20rem  0.50rem 2.65rem rgba(0,0,0,0.6);
+ border-radius: 5px;
+ top:0vh;
+ left:-2vw;
+ }
+ .lidline1{
+ width:10vw;
+ height:7vh;
+ background: #E6E6E6;
+ position:absolute;
+ top: 0vh;
+ left:20vw;
+ }
+ .keyhole {
+ position: absolute;
+ top: 50%;
+ left: 50%;
+ transform: translate(-50%, -70%);
+ width: 10px;
+ height: 15px;
+ border: 10px solid #374A5D;
+ background-color: #374A5D;
+ border-radius: 10px;
+ z-index: 2;
+ }
+ .keyhole:before {
+ content: '';
+ width: 10px;
+ height: 30px;
+ position: absolute;
+ top: 240%;
+ left: 50%;
+ transform: translate(-50%, -50%);
+ background-color: #374A5D;
+ border-radius: 5px;
+ }
+ 
+ .keyhole2 {
+ position: absolute;
+ top: 25%;
+ left: 50%;
+ transform: translate(-50%, -70%);
+ width: 15px;
+ height: 15px;
+ border: 10px solid #374A5D;
+ background-color: #374A5D;
+ border-radius: 20px;
+ z-index: 2;
+ }
+ .keyhole2:before {
+ content: '';
+ width: 10px;
+ height: 0;
+ border-right: 10px solid transparent;
+ border-left: 10px solid transparent;
+ border-bottom: 30px solid #374A5D;
+ position: absolute;
+ top: 220%;
+ left: 50%;
+ transform: translate(-50%, -50%);
+
+ }
+ 
+ 
+ .bottom1 {
+ position: absolute;
+ width: 100%;
+ height: inherit;
+ box-shadow: -0.2rem 0.5rem 2.65rem rgba(0, 0, 0, 0.6);
+ border-bottom-right-radius:25px;
+ border-bottom-left-radius:25px;
+ }
+ 
+ .bottomline1 {
+ position: absolute;
+ width: 3rem;
+ height: inherit;
+ left: 50%;
+ transform: translateX(-50%);
+ border-radius: 5px;
+ }
+ 
+ 
+ .lid1 {
+ position: absolute;
+ width: 114%;
+ height: 2.5rem;
+ box-shadow:-0.20rem  0.50rem 2.65rem rgba(0,0,0,0.6);
+ border-radius: 5px;
+ left: -6%;
+ }
+ .lidline1 {
+ width: 3rem;
+ height: 2.5rem;
+ position: absolute;
+ left: 50%;
+ transform: translateX(-50%);
+ }
+ .ribbonl {
+ position: relative;
+ transform: rotate(135deg) scale(1.5);
+ height: 150px;
+ width: 100px;
+ top: -120px;
+ left: 25px;
+ }
+ .ribbon1 {
+ width: 4.5rem;
+ height: 4.5rem;
+ border-radius: 50%;
+ position: absolute;
+ bottom: 0;
+ left: 50%;
+ transform: translateX(-50%);
+ }
+ 
+ .ribbon2 {
+ position: absolute;
+ width: 0;
+ height: 0;
+ border-left: 32px solid transparent;
+ border-right: 32px solid transparent;
+ top: 1.9rem;
+ left: 50%;
+ transform: translateX(-50%);
+ }
+ .ribbonr {
+ position: relative;
+ transform: rotate(-135deg) scale(1.5);
+ height: 150px;
+ width: 100px;
+ top: -270px;
+ left: 120px;
+ }
+ 
+ .ribbon1, .lidline1, .bottomline1{
+ background: #e6e6e6;
+ 
+ }
+ 
+ .ribbon2{
+ border-bottom: 57px solid #e6e6e6;
+ }
+ 
+ .bottom1, .lid1{
+ background-color: #52a7c1;
+ background-color: #0beef9;
+ background-image: linear-gradient(315deg, #0beef9 0%, #48a9fe 74%);
+ 
+ }
+ .bottom, .lid{
+ background-color: #52a7c1;
+ background-color: #9921e8;
+ background-image:linear-gradient(315deg, #9921e8 0%, #5f72be 74%);
+ 
+ }
+ 
+ .gift1 {
+ position: relative;
+ height: 200px;
+ width: 250px;
+ background-color:transparent;         
+ 
+ }
+ 
+ .gift2 {
+ position: relative;
+ height: 200px;
+ width: 250px;
+ background-color:transparent;         
+ 
+ top:20%;
+ }
+ .h1{
+ position:absolute;
+ bottom:-8%;
+ left:270px;
+ z-index:0;
+ }
+ 
+ .h2{
+ position:absolute;
+ bottom:10px;
+ left:160px;
+ transform:rotate(10deg) scale(.5);
+ }
+ .h3{
+ position:absolute;
+ bottom:-10%;
+ left:55px;
+ transform:rotate(-45deg);
+ /*transform:rotate(-65deg) scale(.5);*/
+ }
+ 
+ .h4{
+ position:absolute;
+ left:-280px;
+ bottom:-50px;
+ transform:rotate(-15deg) scale(1);
+ }
+ 
+ pre{
+ font-family: 'Sofia';
+ }
+ 
+ .happybirthday{
+ color:white;
+ font-family: 'Sofia';
+ font-size:3rem;
+ transform:rotate(-10deg);
+ }
+ 
+ .heading{
+ position:absolute;
+ top:-300%;
+ left:-165%;
+ width:auto;
+ text-align:center;
+ }
+ 
+  @keyframes line4 {
+  0%,100%{
+   height:6vh;
+  }
+  50%{
+  height:10vh;
+  }
+  
+ }
+ @keyframes circle4 {
+ 0%,100%{
+ top:6vh;
+ background-color:lime;
+ }
+ 50%{
+ top:10vh;
+ background-color:yellow;
+ }
+ 
+ }
+ @keyframes line5 {
+ 0%,100%{
+ height:13vh;
+ }
+ 50%{
+ height:17vh;
+ }
+ 
+ }
+ @keyframes circle5 {
+ 0%,100%{
+ top:13vh;
+ background-color:red;
+ }
+ 50%{
+ top:17vh;
+ background-color:blue;
+ }
+ 
+ }
+ @keyframes line6 {
+ 0%,100%{
+  height:18vh;
+ }
+ 50%{
+  height:22vh;
+ }
+ }
+ @keyframes circle6{
+ 0%,100%{
+ top:18vh;
+ background-color:gold;
+ }
+ 50%{
+ top:22vh;
+ background-color:red;
+
+ }
+ 
+ }
+
+
+
+
+
+.line1, .line4, .line7, .line10, .line13, .line16, .line19{
+    animation:line4 10s ease infinite;
+    
+}
+
+
+.circle1, .circle4, .circle7, .circle10, .circle13, .circle16, .circle19{
+    animation:circle4 10s ease infinite;
+}
+
+.line2, .line5, .line8, .line11, .line14, .line17, .line20{
+    
+    animation:line5 12s ease infinite 0.2s;
+}
+.circle2, .circle5, .circle8, .circle11, .circle14, .circle17, .circle20{
+    
+    animation: circle5 12s ease infinite 0.2s;
+}
+.line3, .line6, .line9, .line12, .line15, .line18{
+    
+    animation:line6 14s ease infinite 0.4s;
+}
+
+.circle3, .circle6, .circle9, .circle12, .circle15, .circle18{
+    
+    animation:circle6 14s ease infinite 0.4s;
+}
+
+.main {
+ text-align:center;
+ background:url("https://fsa.zobj.net/crop.php?r=1qaOF_CNQV4sK0wgqP-RrqYZJwf2NI6TWYut3kcCcGALeM6ayFwb30G3q4U-IYz5-gwIxiwYHBSWR5tmxU05PGKCujn1o3g-Z34sS-7W5D2z2q4p8HTP3T3Gdg36vcrdPWnOh73G9gzcF-w7");
+ background-size:cover;
+ background-repeat:no-repeat;
+ background-position:center top;
+ height:100vh;
+ overflow-y:scroll;
+}
+
+.title {
+ font-size:2.5rem;
+ font-family:sans-serif;
+}
+.title span {
+ display:inline-block;
+ margin:0 1px;
+ color:#ff5252;
+ animation:filter 1s linear infinite;
+}
+.title span:nth-child(1) {
+ transform:translateY(80px);
+} 
+.title span:nth-child(2) {
+ transform:translateY(60px);
+ animation-delay:0.2s;
+} 
+.title span:nth-child(3) {
+ transform:translateY(40px);
+ animation-delay:0.4s;
+} 
+.title span:nth-child(4) {
+ transform:translateY(25px);
+ animation-delay:0.6s;
+} 
+.title span:nth-child(5) {
+ transform:translateY(10px);
+ animation-delay:0.8s;
+} 
+.title span:nth-child(6) {
+ transform:translateY(2px);
+ animation-delay:1s;
+ top:5px;
+} 
+.title span:nth-child(7) {
+ margin:0 3px;
+ animation-delay:1.2s;
+} 
+.title span:nth-child(8) {
+ transform:translateY(2px);
+  animation-delay:1.4s;
+} 
+.title span:nth-child(9) {
+ transform:translateY(10px);
+  animation-delay:1.6s;
+} 
+.title span:nth-child(10) {
+ transform:translateY(25px);
+ animation-delay:1.8s;
+;
+
+} 
+.title span:nth-child(11) {
+ transform:translateY(40px);
+  animation-delay:2s;
+}
+@keyframes filter{
+ from {
+  filter:hue-rotate(0deg);
+ }
+ to {
+ filter:hue-rotate(360deg);
+ }
+}
+
+#T1{
+    position:fixed ;
+    top:36%;
+    left:2%;
+}
+#T2{
+   position:fixed ;
+   top:34.5%;
+   left:10%;
+}
+#T3{
+   position:fixed ;
+   top:35.5%;
+   left:18%;
+}
+#T4{
+   position:fixed ;
+   top:32.5%;
+   left:26%;
+}
+#T5{
+   position:fixed ;
+   top:32%;
+   left:32%;
+}
+#T6{
+   position:fixed ;
+   top:31.8%;
+   left:40%;
+}
+#T7{
+    position:fixed ;
+    top:31.8%;
+    left:48%;
+}
+#T8{
+    position:fixed ;
+    top:31.8%;
+    left:52%;
+}
+#T9{
+    position:fixed ;
+    top:31.5%;
+    left:60%;
+}
+#T10{
+    position:fixed ;
+    top:31.5%;
+    left:68%;
+}
+#T11{
+    position:fixed ;
+    top:31.5%;
+    left:78%;
+}
+#A{
+   position:fixed ;
+    top:43%;
+    left:84%;
+}
+#Y{
+   position:fixed ;
+   top:48%;
+   left:93%;
+}
+#img{
+   position:fixed ;
+   left:35%;
+   border-radius:100px;
+   top:42%;
+   width:150px;
+   height:150px;
+   animation:spin 6s infinite ;
+   box-shadow:0 0px 10px  #00CED1, 0 0px 20px #00CED1, 0 0 30px  #00CED1; 
+}
+@keyframes spin{
+    0% {transform:rotate(0deg);}
+    100% {transform:rotate(360deg);}
+}
+
+.bhaiya, .quote1, .quote2, .quote3, .quote4, .quote5{
+    text-align:center;
+  border-radius:10px;
+  background:rgba(0,0,0,0.7);
+  box-shadow:0 0px 10px  #9a2ca0, 0 0px 20px #9a2ca0, 0 0 30px #9a2ca0;
+  font-family: Georgia, serif;
+font-size: 16px;
+letter-spacing: 2px;
+word-spacing: 2px;
+color: #ffffff;
+font-weight: 700;
+text-decoration: none;
+font-style: italic;
+font-variant: normal;
+text-transform: capitalize;
+margin:2vmin;
+}
+
+.bhaiya{
+    text-align:left;
+    animation: bhaiya 5s 18s both;
+    font-size:13.3px;
+    position:absolute;
+    top:0vmin;
+  
+}
+.quote1{
+    position:absolute;
+    top:0vmin;
+   
+    animation: quote1 5s 18s both;
+ 
+}
+
+
+.quote2{
+    position:absolute;
+    top:28vmin;
+    
+    animation: quote2 5s 18s both;
+
+}
+
+
+.quote3{
+    position:absolute;
+    top:67vmin;
+    
+    animation: quote3 7s 18s both;
+
+}
+
+
+.quote4{
+    position:absolute;
+    top:90vmin;
+   
+    animation: quote4 5s 18s both;
+
+}
+
+
+.quote5{
+    position:absolute;
+    top:143vmin;
+    
+    animation: quote5 5s 18s both;
+ 
+    
+}
+
+@keyframes bhaiya {
+  0% {
+    transform: rotateX(0);
+    opacity: 1;
+  }
+  100% {
+    transform: rotateX(-70deg);
+    opacity: 0;
+  }
+}
+
+@keyframes quote1 {
+  0% {
+    transform: translateY(-1000px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+
+@keyframes quote2 {
+  0% {
+    transform: translateX(1000px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+
+@keyframes quote3 {
+  0% {
+    transform: translateZ(-1400px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateZ(0);
+    opacity: 1;
+  }
+}
+
+@keyframes quote5 {
+  0% {
+    transform: translateX(-1000px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes quote4 {
+  0% {
+    transform: translateY(1000px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+
+.section{
+    position:fixed;
+     margin:0;
+    padding:0;   background-image:url("https://media1.tenor.com/images/77ccdda862a76ab7c0c5d8903150ff65/tenor.gif");
+    background-size: 100% 100%;
+   overflow: hidden;
+    background-repeat:no-repeat ;
+    height:100vh;
+    width:100vw;
+    max-height:100vh;
+    top:0%;
+     animation: tilt 6s 8s both;
+ z-index:10;
+}
+
+
+.screenfinal{
+    position:fixed;
+     margin:0;
+    padding:0;   background-image:url("https://media1.tenor.com/images/12d5196728084979064dce3b4f9af144/tenor.gif?itemid=13260187");
+    background-size: 100% 100%;
+   overflow: hidden;
+    background-repeat:no-repeat ;
+    height:100vh;
+    width:100vw;
+    max-height:100vh;
+    top:0%;
+  /*  animation: tilt 6s 8s both;*/
+ z-index:10;
+    animation:swing 18s 26s both}
+ 
+@keyframes swing{
+    0%{
+        transform:rotateX(-100deg);
+        transform-origin:top;
+        opacity:0
+       }    
+ 100%{
+         transform:rotateX(0deg);
+         transform-origin:top;
+         opacity:1
+         }
+} 
+    </style>
+   <script>
+     Swal.fire('Happy birthday Balloon Bhaiya🎊\n A small try🧗‍♀️ to express my gratitude🤗 \n It is quite simple😕 and maybe boring😥 as I am a beginner😔  ')
+        </script>   
+    <section class="sec1" >
+      <div class="sec-inner" >
+          <div class="img" >
+            <img src="data:image/jpeg;base64,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" alt="" >
+          </div>
+ 
+          <h1>💞 My Balloon Bhaiya 💞</h1>
+          <p><b>Let’s light🔥 the candles🕯 and celebrate🥳 this special day of your life. Happy birthday🥳. All things are sweet🥰 and bright😄. May you have a lovely birthday Night🌃.</b></p>
+          <button class="btn" onclick="start()">Happy Birthday</button>
+      </div>
+    </section>
+      <main class="screen1">
+          <div class="semicirclebottom"></div>  
+          
+    <main class="toplayer">
+        <div class="line1"></div>
+        <div class="line2"></div>
+        <div class="line3"></div>
+        <div class="line4"></div>
+        <div class="line5"></div>
+        <div class="line6"></div>
+        <div class="line7"></div>
+        <div class="line8"></div>
+        <div class="line9"></div>
+        <div class="line10"></div>
+        <div class="line11"></div>
+        <div class="line12"></div>
+       <div class="line13"></div>
+        <div class="line14"></div>
+        <div class="line15"></div>
+        <div class="line16"></div>
+        <div class="line17"></div>
+        <div class="line18"></div>
+        <div class="line19"></div>
+        <div class="line20"></div>
+       
+       
+       <div class="circle1"></div>
+        <div class="circle2"></div>
+        <div class="circle3"></div>
+        <div class="circle4"></div>
+        <div class="circle5"></div>
+        <div class="circle6"></div>
+        <div class="circle7"></div>
+        <div class="circle8"></div>
+        <div class="circle9"></div>
+        <div class="circle10"></div>
+        <div class="circle11"></div>
+        <div class="circle12"></div>
+       <div class="circle13"></div>
+        <div class="circle14"></div>
+        <div class="circle15"></div>
+        <div class="circle16"></div>
+        <div class="circle17"></div>
+        <div class="circle18"></div>
+        <div class="circle19"></div>
+        <div class="circle20"></div>
+        
+    </main><!--main class ending of toplayer-->        
+              
+              
+          
+      
+      <div class="h1">
+           <main class="gift">
+            <div class="bottom"></div>
+            <div class="bottomline1"></div>
+            <div class="keyhole2"></div>
+            <div class="lid"></div>
+            <div class="lidline1"></div>  
+        </main>
+      </div>
+        <div class="h3">
+           <main class="gift">
+            <div class="bottom"></div>
+            <div class="bottomline1"></div>
+            <div class="keyhole2"></div>
+            <div class="lid"></div>
+            <div class="lidline1"></div>  
+        </main>
+      </div> 
+      <div class="h2">
+          <div class="gift1 gift2">
+        <div class="bottom1"></div>
+        <div class="bottomline1"></div>
+        <div class="lid1"></div>
+        <div class="lidline1"></div>
+
+        <div class="ribbonl">
+            <div class="ribbon1"></div>
+            <div class="ribbon2"></div>
+        </div>
+
+        <div class="ribbonr">
+            <div class="ribbon1"></div>
+            <div class="ribbon2"></div>
+        </div>
+
+    <div class="h4">
+          <div class="gift1 gift2">
+        <div class="bottom1"></div>
+        <div class="bottomline1"></div>
+        <div class="lid1"></div>
+        <div class="lidline1"></div>
+
+        <div class="ribbonl">
+            <div class="ribbon1"></div>
+            <div class="ribbon2"></div>
+        </div>
+
+        <div class="ribbonr">
+            <div class="ribbon1"></div>
+            <div class="ribbon2"></div>
+        </div>
+    </div>
+      </div>
+     </main>  <!--main class ending of screen1-->     
+   <main class="main" >
+ <h1 class="title">
+  <span id="T1">H</span><span id="T2">A</span><span id="T3">P</span><span id="T4">P</span><span id="T5">Y</span><span id="T6">B</span><span id="T7">I</span><span id="T8">R</span><span id="T9">T</span><span id="T10">H</span><span id="T11">D</span><span id="A">A</span><span id="Y">Y</span>
+ </h1>   
+        <div class="img" >
+   <img src="https://api.sololearn.com/Uploads/Avatars/18109487.jpg" alt="" id="img">
+ </div>
+     <main class="section">
+        <div class="bhaiya">
+      
+<br><b>N</b> is for Nourishing, in every relation<br>
+<b>A</b> is for Alive, your energy touches every soul<br>
+<b>M</b> is for Mighty, you stand proud<br>
+<b>I</b> is for Innocent, from deep within<br>
+<b>T</b> is for Terrific, when it comes to work
+<br><br>
+<b>J</b> is for Jolly, your sweet presence<br>
+<b>A</b> is for Angelic, you have a kind heart<br>
+<b>I</b> is for Impressive, with your views<br>
+<b>N</b> is for Nurturing, the way you care<br>
+<br>
+B is for Brave, Adventurous as always<br>
+A is for Ambrosial, a delightful company<br>
+L is for Lovely, charming forever<br>
+L is for Loyal, makes our friendship strong<br>
+O is for Outrageous, stories we've made<br>
+O is for Optimistic, always!<br>
+N is for Naughty, playing pranks around<br><br>
+B is for Beaming, always cheerful and bright<br>
+H is for Humorous, Like Charlie Chaplin<br>
+A is for Adorable, for being so lovely<br>
+I is for Irreplaceable, yeah! that's enough<br>
+Y is for Young, you're forever young!<br>
+A is for Alluring, charming as ever<br><br>
+
+
+Thank you for being another huge part in my foundation. We may not talk as often but I want you to know brother that your presence in my life matters a lot. Thank you for being there.<br>
+        </div>
+        
+     <div class="quote1">
+           The memories💭 never🙅‍♀️ fade,
+Its time⏳ that does change,
+But,for me😊 you will always remain the same😌,
+With all the games of losing and gain!        </div>
+<div class="quote2">
+           Brother🤹‍♀️ what🤔 shall I say to you,
+You have been a wonderful😄 brother🧒 to me,
+🧔
+I don't🙅‍♀️ have many things🥺 to show,
+You are a true rock star👨‍🎤,
+May🤞 you get everything and you shine like a star⭐!
+        </div>
+<div class="quote3">
+            dear bhaiya🥰
+no matter🙅‍♀️
+where you are🧐
+I want you👨‍🎤 to know you're special😌 to me
+and will always be in my thoughts💭
+        </div>        
+   <div class="quote5">
+      Your birthday🎂 is special🥰 to me because it gives me the chance😄 to remember🤔 the day☀️ that someone👤 I adore😇 and honor😌 came into the world🌐.
+
+       
+   </div>     
+   <div class="quote4">
+Bhaiya🧒, you mean the world🌐 to me. Thank you😊 for the adventures, the conversations🗣, the memories💭. I will cherish them in my heart💖 forever.😌You are a perfect 🔟 in my eyes👀 I could never🙊 ask for a better brother🧒 than you.
+Happy birthday to the best treasure💰 in the world🌐.
+   </div>
+       </main>
+  <main class="screenfinal" ></main>         
+      <audio loop src="https://www.dropbox.com/s/ysbyjqwm2r2a6hp/Shaam_Shaandaar__Shaandaar__Shahid_Kapoor_%26_Alia_Bhatt__Amit_Trivedi%28256k%29?dl=1" id="music"></audio>
+    
+    <script>
+    
+    function start() {
+      document.querySelector(".sec1").style.display = "none";
+      document.querySelector("#music").play()
+    }
+    </script>
+    </body>
+</html>
